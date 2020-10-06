@@ -13,9 +13,26 @@ window.lazySizesConfig = window.lazySizesConfig || {}
 window.lazySizesConfig.preloadAfterLoad = true
 require('lazysizes')
 
+// Header scroll function
+
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop()
+  if (scroll > 20) {
+    $('header').addClass('mainHeaderFixed')
+  } else {
+    $('header').removeClass('mainHeaderFixed')
+  }
+})
+
 $(document).ready(function () {
   feather.replace({
     'stroke-width': 1
+  })
+})
+
+$('ul.menu li:has(ul.nav-drop)').hover(function () {
+  $(this).children('a').click(function () {
+    return false
   })
 })
 

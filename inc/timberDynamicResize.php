@@ -10,12 +10,12 @@ use Flynt\Utils\TimberDynamicResize;
  * Disable dynamic image generation and fall back
  * to regular timber resize functionality.
  */
-// add_filter('Flynt/TimberDynamicResize/disableDynamic', '__return_true');
+add_filter('Flynt/TimberDynamicResize/disableDynamic', '__return_true');
 
 /**
  * Disable WebP generation
  */
-// add_filter('Flynt/TimberDynamicResize/disableWebp', '__return_true');
+add_filter('Flynt/TimberDynamicResize/disableWebp', '__return_true');
 
 /**
  * Set upload directory relative to web root.

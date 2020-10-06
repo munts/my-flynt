@@ -4,10 +4,15 @@
 * Top level styles every element should inherit.
 */
 
+
+
 @include font-face('Montserrat', 'montserrat-v14-latin-regular', '400', 'normal');
 @include font-face('Montserrat', 'montserrat-v14-latin-italic', '400', 'italic');
 @include font-face('Montserrat', 'montserrat-v14-latin-700', '700', 'normal');
 @include font-face('Montserrat', 'montserrat-v14-latin-700italic', '700', 'italic');
+@include font-face('Font Awesome 5 Free', 'fa-solid-900');
+@include font-face('Font Awesome 5 Free', 'fa-regular-400');
+@include font-face('Font Awesome 5 Free', 'fa-brands-400');
 
 html {
   background-color: $color-background;
@@ -554,6 +559,28 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
+  left: 0;
+  position: relative;
+  top: -150px;
+}
+
+
+.mainHeader {
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.mainHeaderFixed {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  height: 138px;
+  justify-content: space-between;
+  left: 0;
+  margin-top: -40px;
+  padding-bottom: 0;
+  padding-top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .flyntComponent {
@@ -585,6 +612,31 @@ select {
   }
 }
 
+.componentSpacingHome {
+  margin: $component-spacing-mobile 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: $component-spacing-tablet 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: $component-spacing-desktop-home 0;
+  }
+
+  &[class*='theme'] {
+    margin: 0;
+    padding: $component-spacing-mobile 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: $component-spacing-tablet 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: $component-spacing-desktop-home 0;
+    }
+  }
+}
+
 .centerMaxWidthContainer {
   @include center;
 
@@ -607,6 +659,22 @@ select {
 
   margin: 0 auto 32px;
   max-width: $content-max-width;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: $container-padding-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: $container-padding-desktop;
+  }
+}
+
+.preContentWide {
+  @include reset-content-margins;
+
+  margin: 0 auto 32px;
+  max-width: $content-wide-max-width;
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
@@ -934,4 +1002,10 @@ select {
   .pill {
     color: $color-background;
   }
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 }

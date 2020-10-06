@@ -29,6 +29,45 @@ add_filter('acf/fields/google_map/api', function ($api) {
     return $api;
 });
 
+add_filter('Flynt/addComponentData?name=NavigationMain', function ($utility) {
+    $phoneNum = Options::getGlobal('Acf', 'utilityNavPhone');
+    $emailAddress = Options::getGlobal('Acf', 'utilityNavEmail');
+    if ($phoneNum) {
+        $utility['phoneNum'] = $phoneNum;
+    }
+    if ($emailAddress) {
+        $utility['emailAddress'] = $emailAddress;
+    }
+    return $utility;
+});
+
+add_filter('Flynt/addComponentData?name=NavigationMain', function ($social) {
+    $phoneNum = Options::getGlobal('Acf', 'utilityNavPhone');
+    $emailAddress = Options::getGlobal('Acf', 'utilityNavEmail');
+    if ($facebook) {
+        $social['facebookUrl'] = $facebook;
+    }
+    if ($twitter) {
+        $social['twitterUrl'] = $twitter;
+    }
+    if ($gplus) {
+        $social['googlePlusUrl'] = $gplus;
+    }
+    if ($youtube) {
+        $social['youtubeUrl'] = $youtube;
+    }
+    return $social;
+});
+
+add_filter('Flynt/addComponentData?name=NavigationMain', function ($siteLogo) {
+    $logo = Options::getGlobal('Acf', 'siteLogo');
+    if ($logo) {
+        $siteLogo['siteLogo'] = $logo;
+    }
+
+    return $siteLogo;
+});
+
 Options::addGlobal('Acf', [
     [
         'name' => 'googleMapsTab',
@@ -43,5 +82,87 @@ Options::addGlobal('Acf', [
         'prepend' => '',
         'append' => '',
         'placeholder' => ''
-    ]
+    ],
+    [
+        'name' => 'utilityNavTab',
+        'label' => __('Utility Nav Items', 'flynt'),
+        'type' => 'tab'
+    ],
+    [
+        'name' => 'utilityNavPhone',
+        'label' => __('Utility Nav Phone Number', 'flynt'),
+        'type' => 'text',
+        'maxlength' => 20,
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+        'name' => 'utilityNavTab',
+        'label' => __('Utility Nav Items', 'flynt'),
+        'type' => 'tab'
+    ],
+    [
+        'name' => 'utilityNavEmail',
+        'label' => __('Utility Nav Email Address', 'flynt'),
+        'type' => 'text',
+        'maxlength' => 60,
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+    'name' => 'socialMediaTab',
+    'label' => __('Social Media', 'flynt'),
+    'type' => 'tab'
+    ],
+    [
+        'name' => 'facebookUrl',
+        'label' => __('Facebook URL', 'flynt'),
+        'type' => 'text',
+        'maxlength' => 100,
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+        'name' => 'googlePlusUrl',
+        'label' => __('Google Plus url', 'flynt'),
+        'type' => 'text',
+        'maxlength' => 60,
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+        'name' => 'twitterUrl',
+        'label' => __('Twitter url', 'flynt'),
+        'type' => 'text',
+        'maxlength' => 60,
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+        'name' => 'youtubeUrl',
+        'label' => __('YouTube Channel url', 'flynt'),
+        'type' => 'text',
+        'maxlength' => 60,
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+        'name' => 'siteLogoTab',
+        'label' => __('Site Logo', 'flynt'),
+        'type' => 'tab'
+    ],
+    [
+        'name' => 'siteLogo',
+        'label' => __('Site Logo', 'flynt'),
+        'type' => 'image',
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
 ]);

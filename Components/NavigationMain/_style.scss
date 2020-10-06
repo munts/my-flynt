@@ -1,5 +1,5 @@
 [is='flynt-navigation-main'] {
-  $navigation-height: 100px;
+  $navigation-height: 150px;
 
   display: none;
 
@@ -8,7 +8,7 @@
   }
 
   .wrapper {
-    background-color: $color-background;
+    //background-color: $color-background;
     height: $navigation-height;
   }
 
@@ -16,13 +16,48 @@
     display: flex;
     height: 100%;
     justify-content: space-between;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .menuContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    height: $navigation-height;
+    justify-content: space-between;
+    left: 0;
+    margin-top: -40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+  }
+
+  .utilityNav {
+    height: 30px;
+    padding-bottom: 0;
+    padding-top: 5px;
+    width: 100%;
+  }
+
+  .utilityNav .menu {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .utilityNav .menu li {
+    color: #fff;
+    float: right;
+    padding: 0 5px;
+  }
+
+  .utilityNav li a {
+    color: #fff;
   }
 
   .logo {
     display: block;
-    height: 100%;
+    height: 75%;
 
     &-image {
       height: 100%;
@@ -40,16 +75,19 @@
 
     &-item--current {
       .menu-link {
-        color: $color-accent;
+        border-bottom: 5px solid #fff;
+        color: #fff;
       }
     }
 
     &-link {
-      color: $color-text;
+      //color: $color-text;
+      color: #fff;
       display: inline-block;
-      font-weight: 700;
-      padding: 7px 18px;
+      font-weight: 400;
+      padding: 7px 12px;
       text-decoration: none;
+      text-transform: uppercase;
       transition: color 0.2s ease-out;
 
       &:hover,
@@ -58,4 +96,51 @@
       }
     }
   }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .nav-drop {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+    margin-top: 0.3rem;
+    opacity: 0;
+    padding-left: 0;
+    position: absolute;
+    text-align: left;
+    //-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    //-webkit-transition-property: -webkit-transform,opacity,visibility;
+    transition-property: transform,opacity,visibility;
+    visibility: hidden;
+    width: 18rem;
+    z-index: 101;
+  }
+
+  .nav-drop:not(.custom-content) li a {
+    color: #666;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.2rem 1rem;
+  }
+  // stylelint-disable selector-no-qualifying-type
+  .menu-item:hover ul.nav-drop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  li.nav-drop-item {
+    list-style: none;
+  }
+
+  li.nav-drop-item:hover {
+    background-color: #e4e4cb;
+  }
+  // stylelint-enable selector-no-qualifying-type
+
 }

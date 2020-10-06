@@ -17,6 +17,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
+                    Components\BlockGridHTML\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
@@ -30,16 +31,11 @@ add_action('Flynt/afterRegisterComponents', function () {
         'location' => [
             [
                 [
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'page'
-                ],
-                [
                     'param' => 'page_type',
                     'operator' => '!=',
                     'value' => 'posts_page'
                 ]
             ]
-        ]
+        ],
     ]);
 });
