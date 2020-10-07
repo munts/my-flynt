@@ -40,6 +40,15 @@
     width: 100%;
   }
 
+  .pill {
+    background-color: #cd2122;
+    color: #fff;
+  }
+  
+  .pill:hover {
+    cursor: pointer;
+  }
+
   .utilityNav .menu {
     display: inline-block;
     width: 100%;
