@@ -68,6 +68,14 @@ add_filter('Flynt/addComponentData?name=NavigationMain', function ($siteLogo) {
     return $siteLogo;
 });
 
+add_filter('Flynt/addComponentData?name=NavigationBurger', function ($utility) {
+    $phoneNum = Options::getGlobal('Acf', 'utilityNavPhone');
+    if ($phoneNum) {
+        $utility['phoneNum'] = $phoneNum;
+    }
+    return $utility;
+});
+
 Options::addGlobal('Acf', [
     [
         'name' => 'googleMapsTab',

@@ -1,9 +1,7 @@
 <nav is="flynt-navigation-burger" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="container centerMaxWidthContainer">
     <ul class="menu2" style="list-style: none;">
-      <li>876.5309</li>
-      <li>Email us</li>
-      <li>{{ phone }}</li>
+      <li><a href="tel:{{phoneNum}}">{{phoneNum}}</a></li>
     </ul>
     {% include 'Partials/_logo.twig' with { 'logo': logo, 'site': site } only %}
     {% if menu %}
