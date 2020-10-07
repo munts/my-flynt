@@ -76,6 +76,15 @@ add_filter('Flynt/addComponentData?name=NavigationBurger', function ($utility) {
     return $utility;
 });
 
+add_filter('Flynt/addComponentData?name=NavigationFooterColumns', function ($siteLogo) {
+    $logo = Options::getGlobal('Acf', 'siteLogo');
+    if ($logo) {
+        $siteLogo['siteLogo'] = $logo;
+    }
+
+    return $siteLogo;
+});
+
 Options::addGlobal('Acf', [
     [
         'name' => 'googleMapsTab',
