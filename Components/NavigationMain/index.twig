@@ -1,14 +1,17 @@
 <nav is="flynt-navigation-main" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="wrapper">
-    <div class="container centerMaxWidthContainer utilityNav">
-        <ul class="menu">
-            <li><a href="/covid-19/"><button class="pill">COVID-19</button></a></li>
-            <li><a href="/email-signup/">Email Sign Up</a></li>
-            <li><a href="/contact-us/">Contact Us</a></li>
-            <li>{{phoneNum}}</li>
+    <div class="container utilityNav">
+        <ul class="menu left">
+            <li><a href="/email-signup/"><i class="fa fa-map-marker-alt"></i> Location</a></li>
+            <li><a href="/contact-us/"><i class="fa fa-envelope"></i> Contact Us</a></li>
+            <li><i class="fa fa-phone"></i> {{phoneNum}}</li>
             {# <li><a{{emailAddress}}</li> #}
             {# <li><a href="{{facebookUrl}}" target="_blank"><i class="fa fa-facebook" style="font-size: 1.5em;"></i></a></li>
             <li><a href="{{instagramUrl}}" target="_blank"><i class="fa fa-instagram" style="font-size: 1.5em;"></i></a></li> #}
+        </ul>
+        <ul class="menu right">
+            <li><a href="/covid-19/"><button class="pill covid">COVID-19</button></a></li>
+            {# <li><a href="/covid-19/"><button class="button button--small bookNow">Book Now</button></a></li> #}
         </ul>
     </div>
     <div class="container centerMaxWidthContainer logoContainer">

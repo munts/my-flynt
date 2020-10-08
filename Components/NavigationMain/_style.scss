@@ -34,14 +34,20 @@
   }
 
   .utilityNav {
+    background-color: rgba(0, 0, 0, 0.8);
     height: 30px;
-    padding-bottom: 0;
+    padding-bottom: 6px;
     padding-top: 5px;
     width: 100%;
   }
 
-  .pill {
+  .covid {
     background-color: #cd2122;
+    color: #fff;
+  }
+
+  .bookNow {
+    background-color: #38b51f;
     color: #fff;
   }
   
@@ -55,9 +61,7 @@
 
   .utilityNav .menu li {
     color: #fff;
-    // display: inline-block;
-    float: right;
-    padding: 0 5px;
+    padding: 3px 10px;
   }
 
   .utilityNav li a {
@@ -110,6 +114,14 @@
         color: $color-accent;
       }
     }
+  }
+
+  .menu.left {
+    justify-content: flex-start;
+  }
+
+  .menu.right {
+    justify-content: flex-end;
   }
 
   a {
