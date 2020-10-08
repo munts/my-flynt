@@ -76,13 +76,13 @@ add_filter('Flynt/addComponentData?name=NavigationBurger', function ($utility) {
     return $utility;
 });
 
-add_filter('Flynt/addComponentData?name=NavigationFooterColumns', function ($siteLogo) {
-    $logo = Options::getGlobal('Acf', 'siteLogo');
+add_filter('Flynt/addComponentData?name=NavigationFooterColumns', function ($footerLogo) {
+    $logo = Options::getGlobal('Acf', 'footerLogo');
     if ($logo) {
-        $siteLogo['siteLogo'] = $logo;
+        $footerLogo['footerLogo'] = $logo;
     }
 
-    return $siteLogo;
+    return $footerLogo;
 });
 
 Options::addGlobal('Acf', [
@@ -177,6 +177,14 @@ Options::addGlobal('Acf', [
     [
         'name' => 'siteLogo',
         'label' => __('Site Logo', 'flynt'),
+        'type' => 'image',
+        'prepend' => '',
+        'append' => '',
+        'placeholder' => ''
+    ],
+    [
+        'name' => 'footerLogo',
+        'label' => __('Footer Logo', 'flynt'),
         'type' => 'image',
         'prepend' => '',
         'append' => '',
