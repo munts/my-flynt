@@ -17,13 +17,13 @@ require('lazysizes')
 
 $(window).scroll(function () {
   var scroll = $(window).scrollTop()
-  if (scroll > 20) {
-    $('header').addClass('mainHeaderFixed')
+  if (scroll > 100) {
+    // $('header').addClass('mainHeaderFixed')
     $('#menuWrapper').addClass('containerScrolled')
     $('#logo').addClass('logoScrolled')
     $('.menu-link').addClass('menu-link-scrolled')
   } else {
-    $('header').removeClass('mainHeaderFixed')
+    // $('header').removeClass('mainHeaderFixed')
     $('#menuWrapper').removeClass('containerScrolled')
     $('#logo').removeClass('logoScrolled')
     $('.menu-link').removeClass('menu-link-scrolled')

@@ -34,6 +34,17 @@
     padding-top: 10px;
   }
 
+  .logoScrolled .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logoScrolled .logo-image {
+    height: auto;
+    max-width: 160px;
+    width: 100%;
+  }
+
   .menuContainer {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;

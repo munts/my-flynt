@@ -1,6 +1,7 @@
 [is='flynt-block-wysiwyg-sidebar'] {
   .contentWrapper {
-    max-width: 800px;
+    max-width: 1024px;
+    min-width: 800px;
 
     @media (min-width: $breakpoint-mobile-horizontal) {
       display: flex;
@@ -16,7 +17,7 @@
     @media (min-width: $breakpoint-mobile-horizontal) {
       margin-bottom: 0;
       padding-right: 15px;
-      width: 200px;
+      width: 300px;
     }
   }
 
