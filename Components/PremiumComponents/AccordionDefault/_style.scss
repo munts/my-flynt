@@ -3,6 +3,10 @@
     @include reset-list;
   }
 
+  button:focus {
+    outline: 0;
+  }
+
   .panel {
     padding-bottom: 15px;
 

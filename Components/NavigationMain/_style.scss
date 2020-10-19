@@ -20,6 +20,12 @@
     padding-top: 10px;
   }
 
+  .containerScrolled {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
   .menuContainer {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
@@ -97,6 +103,11 @@
         border-bottom: 5px solid #fff;
         color: #fff;
       }
+      
+      .menu-link-scrolled {
+        border-bottom: 5px solid #333;
+        color: #333;
+      }
     }
 
     &-link {
@@ -113,6 +124,11 @@
       &:focus {
         color: $color-accent;
       }
+    }
+
+    &-link-scrolled {
+      //color: $color-text;
+      color: #333;
     }
   }
 

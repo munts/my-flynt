@@ -19,8 +19,12 @@ $(window).scroll(function () {
   var scroll = $(window).scrollTop()
   if (scroll > 20) {
     $('header').addClass('mainHeaderFixed')
+    $('#menuWrapper').addClass('containerScrolled')
+    $('.menu-link').addClass('menu-link-scrolled')
   } else {
     $('header').removeClass('mainHeaderFixed')
+    $('#menuWrapper').removeClass('containerScrolled')
+    $('.menu-link').removeClass('menu-link-scrolled')
   }
 })
 
