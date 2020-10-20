@@ -8,6 +8,7 @@
     position: relative;
     z-index: 1;
   }
+  .swiper-slide { background-size: cover; }
 
   .container {
     @include center($padding: 0);

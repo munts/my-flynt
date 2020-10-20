@@ -7,9 +7,14 @@
       <div class="swiper-slide">
         <picture class="picture">
           <source {{ notFirstSlide ? 'data-' }}srcset="
-            {{ slide.images.imageDesktop.src | resizeDynamic(2560, 640, 'center') }} 2560w,
+            {# {{ slide.images.imageDesktop.src | resizeDynamic(2560, 640, 'center') }} 2560w,
             {{ slide.images.imageDesktop.src | resizeDynamic(2048, 640, 'center') }} 2048w,
             {{ slide.images.imageDesktop.src | resizeDynamic(1440, 640, 'center') }} 1440w,
+            {{ slide.images.imageDesktop.src | resizeDynamic(900, 640, 'center') }} 900w,
+            {{ slide.images.imageDesktop.src | resizeDynamic(768, 640, 'center') }} 768w" #}
+            {{ slide.images.imageDesktop.src | resizeDynamic(2560, 1024, 'center') }} 2560w,
+            {{ slide.images.imageDesktop.src | resizeDynamic(2048, 960, 'center') }} 2048w,
+            {{ slide.images.imageDesktop.src | resizeDynamic(1440, 840, 'center') }} 1440w,
             {{ slide.images.imageDesktop.src | resizeDynamic(900, 640, 'center') }} 900w,
             {{ slide.images.imageDesktop.src | resizeDynamic(768, 640, 'center') }} 768w"
           data-aspectratio="{{ 768 / 640 }}"
