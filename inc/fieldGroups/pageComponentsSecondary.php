@@ -5,15 +5,15 @@ use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
-        'name' => 'pageComponents',
-        'title' => 'Page Components',
+        'name' => 'pageComponentsSecondary',
+        'title' => 'Secondary Page Components',
         'style' => 'seamless',
         'fields' => [
             [
-                'name' => 'pageComponents',
-                'label' => __('Page Components', 'flynt'),
+                'name' => 'pageComponentsSecondary',
+                'label' => __('Secondary Page Components', 'flynt'),
                 'type' => 'flexible_content',
-                'button_label' => __('Add Component', 'flynt'),
+                'button_label' => __('Add Secondary Page Component', 'flynt'),
                 'layouts' => [
                     //Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
@@ -25,27 +25,19 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridPostsLatest\getACFLayout(),
                     Components\ListComponents\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
+                    Components\SliderImages\getACFLayout(),
+                    Components\SpecialsPackagesSlider\getACFLayout(),
                 ]
             ]
         ],
-        'location' => array(
-            array(
-                array(
+        'location' => [
+            [
+                [
                     'param' => 'page_template',
-                    'operator' => '!=',
-                    'value' => 'sitzmark-secondary.php',
-                ),
-                array(
-                    'param' => 'page_template',
-                    'operator' => '!=',
-                    'value' => 'sitzmark-homepage.php',
-                ),
-                array(
-                    'param' => 'page_type',
-                    'operator' => '!=',
-                    'value' => 'posts_page',
-                ),
-            ),
-        ),
+                    'operator' => '==',
+                    'value' => 'sitzmark-secondary.php'
+                ]
+            ]
+        ],
     ]);
 });
