@@ -111,3 +111,38 @@ add_action('Flynt/afterRegisterComponents', function () {
     }
     $homepageStore->set($pageComponentsHome['key'], $pageComponentsHome);
 }, 11);
+
+add_action('Flynt/afterRegisterComponents', function () {
+    $accommodationsStore = acf_get_local_store('fields');
+    $pageComponentsAccommodations = $accommodationsStore->get('pageComponentsAccommodations');
+    $accommodationsLayouts = [
+        Components\HeroSlider\getACFLayout(),
+        Components\HeroImageText\getACFLayout(),
+        Components\SliderImageGallery\getACFLayout(),
+        Components\SliderImagesCentered\getACFLayout(),
+        Components\SpecialsPackagesSlider\getACFLayout(),
+        Components\AccordionDefault\getACFLayout(),
+        Components\BlockTextImageCrop\getACFLayout(),
+        Components\BlockWysiwygSidebar\getACFLayout(),
+        Components\BlockWysiwygTwoCol\getACFLayout(),
+        Components\BlockVideoOembed\getACFLayout(),
+        Components\BlockWysiwyg\getACFLayout(),
+        Components\GridImageText\getACFLayout(),
+        Components\NavigationFooterColumns\getACFLayout(),
+        //Components\BlockCountUp\getACFLayout(),
+        //Components\BlockImageTextParallax\getACFLayout(),
+        // Components\FormNewsletter\getACFLayout(),
+        //Components\HeroCta\getACFLayout(),
+        //Components\HeroImageCta\getACFLayout(),
+        //Components\HeroTextImage\getACFLayout(),
+        //Components\ListIcons\getACFLayout(),
+        //Components\ListLogos\getACFLayout(),
+        //Components\ListSocial\getACFLayout(),
+    ];
+    foreach ($accommodationsLayouts as $accommodationsLayout) {
+        $config = ResolveConfig::forLayout($accommodationsLayout, ['pageComponentsAccommodations_pageComponentsAccommodations']);
+        $config['label'] = "🏆 {$config['label']}";
+        $pageComponentsAccommodations['layouts'][] = $config;
+    }
+    $accommodationsStore->set($pageComponentsAccommodations['key'], $pageComponentsAccommodations);
+}, 11);
