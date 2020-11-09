@@ -15,7 +15,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
-                    //Components\BlockCollapse\getACFLayout(),
+                    Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockGridHTML\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
@@ -33,17 +33,12 @@ add_action('Flynt/afterRegisterComponents', function () {
                 array(
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'accommodations',
+                    'value' => 'page'
                 ),
                 array(
                     'param' => 'page_template',
                     'operator' => '!=',
                     'value' => 'sitzmark-secondary.php',
-                ),
-                array(
-                    'param' => 'page_template',
-                    'operator' => '!=',
-                    'value' => 'sitzmark-homepage.php',
                 ),
                 array(
                     'param' => 'page_type',
