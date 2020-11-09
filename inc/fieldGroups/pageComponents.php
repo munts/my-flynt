@@ -31,6 +31,11 @@ add_action('Flynt/afterRegisterComponents', function () {
         'location' => array(
             array(
                 array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'accommodations',
+                ),
+                array(
                     'param' => 'page_template',
                     'operator' => '!=',
                     'value' => 'sitzmark-secondary.php',
