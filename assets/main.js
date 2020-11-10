@@ -4,6 +4,7 @@ import 'normalize.css/normalize.css'
 import './main.scss'
 import $ from 'jquery'
 import feather from 'feather-icons'
+import GLightbox from 'glightbox'
 
 import installCE from 'document-register-element/pony'
 
@@ -33,6 +34,17 @@ $(window).scroll(function () {
 $(document).ready(function () {
   feather.replace({
     'stroke-width': 1
+  })
+})
+
+$(function (event) {
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+    onOpen: () => {
+      console.log(lightbox + 'Lightbox opened')
+    }
   })
 })
 

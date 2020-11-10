@@ -117,6 +117,17 @@ function getConfig()
                         'selector' => 'ul,ol'
                     ]
                 ]
+            ],
+            [
+                'title' => 'Custom Styles',
+                'icon' => '',
+                'items' => [
+                    [
+                        'title' => 'Lightbox image',
+                        'classes' => 'glightbox',
+                        'selector' => 'a'
+                    ]
+                ]
             ]
         ],
         'toolbars' => [
