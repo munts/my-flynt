@@ -57,18 +57,18 @@
     &-inner {
       @include reset-content-margins;
 
-      // background: rgba(0, 0, 0, 0.5);
-      // bottom: 59px;
-      // color: #fff;
-      // height: auto;
-      // left: 0;
-      // padding: 15px 30px;
-      // position: relative;
-      // right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      bottom: 59px;
+      color: #fff;
+      height: auto;
+      left: 0;
+      padding: 15px 30px;
+      position: relative;
+      right: 0;
 
-      &:not(.boxPadding) {
-        padding: $gutter-width 0;
-      }
+      // &:not(.boxPadding) {
+      //   padding: $gutter-width 0;
+      // }
     }
   }
 }
