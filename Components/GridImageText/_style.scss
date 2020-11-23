@@ -42,6 +42,10 @@
     padding: $gutter-width 0 0 $gutter-width;
     width: 100%;
   }
+  
+  .grid-item a {
+    text-decoration: none;
+  }
 
   .content {
     height: 100%;

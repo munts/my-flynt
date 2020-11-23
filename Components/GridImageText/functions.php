@@ -55,6 +55,17 @@ function getACFLayout()
                         'wrapper' => [
                             'width' => 60
                         ],
+                    ],
+                    [
+                        'label' => __('URL', 'flynt'),
+                        'name' => 'ctaUrl',
+                        'type' => 'text',
+                        'tabs' => 'visual,text',
+                        'media_upload' => 0,
+                        'delay' => 1,
+                        'wrapper' => [
+                            'width' => 60
+                        ],
                     ]
                 ]
             ],
