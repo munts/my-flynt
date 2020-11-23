@@ -151,7 +151,13 @@ function getConfig()
                     '|',
                     'undo',
                     'redo',
-                    'fullscreen'
+                    '|',
+                    'fullscreen',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright',
+                    '|',
+                    'forecolor'
                 ]
             ],
             'basic' => [
@@ -165,7 +171,12 @@ function getConfig()
                     '|',
                     'undo',
                     'redo',
-                    'fullscreen'
+                    'fullscreen',
+                    '|',
+                    'fullscreen',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright'
                 ]
             ]
         ]
