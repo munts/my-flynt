@@ -166,8 +166,8 @@
   }
 
   .nav-drop {
-    background: #fff;
-    border: 1px solid #ddd;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #000;
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
     margin-top: 0.3rem;
     opacity: 0;
@@ -184,10 +184,10 @@
   }
 
   .nav-drop:not(.custom-content) li a {
-    color: #666;
+    color: #fff;
     cursor: pointer;
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     padding: 0.2rem 1rem;
   }
@@ -202,7 +202,12 @@
   }
 
   li.nav-drop-item:hover {
-    background-color: #e4e4cb;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  
+  li.nav-drop-item a:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: #bb0e02;
   }
   // stylelint-enable selector-no-qualifying-type
 
