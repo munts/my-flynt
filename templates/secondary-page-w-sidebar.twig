@@ -1,0 +1,17 @@
+{% extends 'templates/_document_w_sidebar.twig' %}
+
+{% block heroContent %}
+  {% for component in post.meta('pageComponents') %}
+    {{ renderComponent(component) }}
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+  {% for component in post.meta('pageComponentsSecondaryWithSidebar') %}
+    {{ renderComponent(component) }}
+  {% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+  {{dynamic_sidebar}}
+{% endblock %}

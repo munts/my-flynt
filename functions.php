@@ -5,6 +5,7 @@ namespace Flynt;
 use Flynt\Utils\FileLoader;
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/lib/widgets.php';
 
 if (!defined('WP_ENV')) {
     define('WP_ENV', 'production');
@@ -30,3 +31,35 @@ add_action('after_setup_theme', function () {
      */
     load_theme_textdomain('flynt', get_template_directory() . '/languages');
 });
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+// function sidebar_widgets_init() {
+
+//     register_sidebar( array(
+//         'name'          => 'Main Sidebar',
+//         'id'            => 'main_sidebar',
+//         'before_widget' => '<div>',
+//         'after_widget'  => '</div>',
+//         'before_title'  => '<h2 class="rounded">',
+//         'after_title'   => '</h2>',
+//     ) );
+
+// }
+// //add_action( 'widgets_init', 'sidebar_widgets_init' );
+// add_action( 'init', 'sidebar_widgets_init', 0 );
+
+function remove_default_widgets()
+{
+    unregister_widget('WP_Widget_Pages');
+    unregister_widget('WP_Widget_Calendar');
+    unregister_widget('WP_Widget_Archives');
+    unregister_widget('WP_Widget_Links');
+    unregister_widget('WP_Widget_Meta');
+    unregister_widget('WP_Widget_Recent_Comments');
+    unregister_widget('WP_Widget_RSS');
+    unregister_widget('WP_Widget_Tag_Cloud');
+}
+do_action('widgets_init', 'remove_default_widgets', 15);

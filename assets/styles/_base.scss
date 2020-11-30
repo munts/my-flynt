@@ -564,6 +564,13 @@ select {
   top: -150px;
 }
 
+.mainContentWithSidebar {
+  flex: 1 0 auto;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
 .mainFooter {
   flex: 1 0 auto;
   left: 0;
@@ -571,6 +578,16 @@ select {
   top: -150px;
 }
 
+.page-template-sitzmark-secondary-w-sidebar .mainFooter {
+  flex: 1 0 auto;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+.page-template-sitzmark-secondary-w-sidebar .box {
+  padding: 0 60px;
+}
 
 .mainHeader {
   // background-color: rgba(0, 0, 0, 0.2);
