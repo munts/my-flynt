@@ -7,6 +7,7 @@
 
 use Timber\Timber;
 use Timber\Post;
+
 $dynamicSidebar = get_field('sidebar_to_use');
 $context = Timber::get_context();
 $context['post'] = new Post();
