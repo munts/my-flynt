@@ -15,6 +15,17 @@ function isTrackingEnabled($gaId)
     return false;
 }
 
+add_action('wp_head', function () {
+    echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43322510-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "UA-43322510-1");';
+    echo 'setTimeout("gtag(\'event\', \'No Bounce\', { \'event_category\' : \'Adjusted Bounce\' })",30000);';
+    echo '</script>';
+});
+
 add_filter('Flynt/addComponentData?name=FeatureGoogleAnalytics', function ($data) {
     $googleAnalyticsOptions = Options::getGlobal('GoogleAnalytics');
 
@@ -43,10 +54,10 @@ add_action('Flynt/thirdPartyCookies/initializeOptions', function () {
     ]);
 });
 
-add_action('wp_footer', function () {
-    $context = Timber::get_context();
-    Timber::render_string('{{ renderComponent("FeatureGoogleAnalytics") }}', $context);
-});
+// add_action('wp_footer', function () {
+//     $context = Timber::get_context();
+//     Timber::render_string('{{ renderComponent("FeatureGoogleAnalytics") }}', $context);
+// });
 
 add_filter('Flynt/thirdPartyCookies', function ($features) {
     $googleAnalyticsTranslatableOptions = Options::getTranslatable('GoogleAnalytics');
