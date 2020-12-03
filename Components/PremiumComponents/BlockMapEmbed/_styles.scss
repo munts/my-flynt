@@ -1,0 +1,23 @@
+[is='flynt-block-map-embed'] {
+  .container {
+    @include reset-content-margins;
+    text-align: center;
+  }
+
+  .acf-map {
+    border: #ccc solid 1px;
+    height: 400px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .acf-map img {
+    max-width: inherit !important;
+  }
+
+  @media (max-width: $content-max-width - 1px) {
+    br {
+      content: '\00a0';
+    }
+  }
+}

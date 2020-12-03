@@ -19,14 +19,15 @@ add_action('Flynt/afterRegisterComponents', function () {
                     //Components\BlockImage\getACFLayout(),
                     //Components\BlockGridHTML\getACFLayout(),
                     //Components\BlockImageText\getACFLayout(),
-                    // Components\BlockVideoOembed\getACFLayout(),
-                    // Components\BlockWysiwyg\getACFLayout(),
-                    // Components\GridImageText\getACFLayout(),
+                    //Components\BlockVideoOembed\getACFLayout(),
+                    //Components\BlockWysiwyg\getACFLayout(),
+                    //Components\GridImageText\getACFLayout(),
                     //Components\GridPostsLatest\getACFLayout(),
                     //Components\ListComponents\getACFLayout(),
                     //Components\SliderImages\getACFLayout(),
                     //Components\SliderImages\getACFLayout(),
                     //Components\SpecialsPackagesSlider\getACFLayout(),
+                    Components\BlockMapEmbed\getACFLayout(),
                 ]
             ]
         ],

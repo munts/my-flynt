@@ -41,23 +41,23 @@ add_filter('Flynt/addComponentData?name=NavigationMain', function ($utility) {
     return $utility;
 });
 
-add_filter('Flynt/addComponentData?name=NavigationMain', function ($social) {
-    $phoneNum = Options::getGlobal('Acf', 'utilityNavPhone');
-    $emailAddress = Options::getGlobal('Acf', 'utilityNavEmail');
-    if ($facebook) {
-        $social['facebookUrl'] = $facebook;
-    }
-    if ($twitter) {
-        $social['twitterUrl'] = $twitter;
-    }
-    if ($gplus) {
-        $social['googlePlusUrl'] = $gplus;
-    }
-    if ($youtube) {
-        $social['youtubeUrl'] = $youtube;
-    }
-    return $social;
-});
+// add_filter('Flynt/addComponentData?name=NavigationMain', function ($social) {
+//     $phoneNum = Options::getGlobal('Acf', 'utilityNavPhone');
+//     $emailAddress = Options::getGlobal('Acf', 'utilityNavEmail');
+//     if ($facebook) {
+//         $social['facebookUrl'] = $facebook;
+//     }
+//     if ($twitter) {
+//         $social['twitterUrl'] = $twitter;
+//     }
+//     if ($gplus) {
+//         $social['googlePlusUrl'] = $gplus;
+//     }
+//     if ($youtube) {
+//         $social['youtubeUrl'] = $youtube;
+//     }
+//     return $social;
+// });
 
 add_filter('Flynt/addComponentData?name=NavigationMain', function ($siteLogo) {
     $logo = Options::getGlobal('Acf', 'siteLogo');

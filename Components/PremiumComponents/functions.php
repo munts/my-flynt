@@ -35,6 +35,7 @@ add_action('Flynt/afterRegisterComponents', function () {
         Components\SliderImageGallery\getACFLayout(),
         Components\SliderImagesCentered\getACFLayout(),
         Components\SpecialsPackagesSlider\getACFLayout(),
+        Components\BlockMapEmbed\getACFLayout(),
     ];
     foreach ($layouts as $layout) {
         $config = ResolveConfig::forLayout($layout, ['pageComponents_pageComponents']);
