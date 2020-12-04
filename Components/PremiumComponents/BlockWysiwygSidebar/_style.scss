@@ -19,6 +19,7 @@
     background-color: #f6f6f6;
     flex-shrink: 0;
     margin-bottom: 1.5rem;
+    min-width: 345px;
     text-align: left;
 
     @media (min-width: $breakpoint-mobile-horizontal) {
