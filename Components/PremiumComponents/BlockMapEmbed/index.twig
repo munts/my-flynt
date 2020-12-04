@@ -24,7 +24,7 @@
             title: "The Sitzmark Lodge Vail, Colorado",
         });
 
-        const contentString = '<div style="font-weight:bold;font-size:16px;padding:10px;">{{gmaps.address}}</div>' + '<div style="font-weight:bold;font-size:16px;padding:10px;">Telephone: <a href="tel:970-476-5001">970-476-5001</a></div>';
+        const contentString = '<div style="font-weight:bold;font-size:16px;padding:10px;">{{gmaps.address}}</div>' + '<div style="font-weight:bold;font-size:16px;padding:10px;">{{markerInfo}}</div>';
             
         const infowindow = new google.maps.InfoWindow({
             content: contentString,

@@ -15,7 +15,7 @@ function getACFLayout()
                 'name' => 'contentHtml',
                 'type' => 'wysiwyg',
                 'tabs' => 'visual,text',
-                'media_upload' => 0,
+                'media_upload' => 1,
                 'delay' => 1,
                 'instructions' => __('The content overlaying the image. Character Recommendations: Title: 30-100, Content: 80-250.', 'flynt'),
             ],
@@ -38,6 +38,12 @@ function getACFLayout()
                         'type' => 'text',
                     ],
                 ],
+            ],
+            [
+                'label' => __('Map Marker Info Window', 'flynt'),
+                'name' => 'markerInfo',
+                'type' => 'text',
+                'instructions' => __('The content that will display when a user clicks on the map marker', 'flynt'),
             ],
         ]
     ];
