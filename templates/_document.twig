@@ -29,9 +29,28 @@
           {% endif %}
         </main>
         <footer class="mainFooter">
+          <aside>
+            {% block sidebar %}
+            <div class="flyntComponent componentSpacing " is="flynt-list-components">
+              <div class="container centerMaxWidthContainer">
+                <ul class="components">
+                  <li class="component boxShadow">
+                     {{dynamic_sidebar1}}
+                  </li>
+                  <li class="component boxShadow">
+                    <h3>Newsletter Sign Up</h3>
+                    {{dynamic_sidebar2}}
+                  </li>
+                  <li class="component boxShadow" style="padding:15px;">
+                    {{dynamic_sidebar3}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {% endblock %}
+          </aside>
           {% block footer %}
-            {{ renderComponent('NavigationFooterColumns') }}
-            {{ renderComponent('NavigationFooter') }}
+          {{ renderComponent('NavigationFooter') }}
           {% endblock %}
         </footer>
       </div>

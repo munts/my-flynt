@@ -1,5 +1,12 @@
 {% extends contentOnly ? 'templates/_contentOnly.twig' : 'templates/_document.twig' %}
+{% extends 'templates/_document.twig' %}
 
 {% block content %}
   {{ renderComponent('GridPostsArchive', { posts: posts }) }}
+{% endblock %}
+
+{% block sidebar %}
+  {{dynamic_sidebar1}}
+  {{dynamic_sidebar2}}
+  {{dynamic_sidebar3}}
 {% endblock %}
