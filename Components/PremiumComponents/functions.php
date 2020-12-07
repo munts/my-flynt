@@ -35,6 +35,7 @@ add_action('Flynt/afterRegisterComponents', function () {
         Components\SliderImageGallery\getACFLayout(),
         Components\SliderImagesCentered\getACFLayout(),
         Components\SpecialsPackagesSlider\getACFLayout(),
+        Components\BlockCustomHtml\getACFLayout(),
         Components\BlockMapEmbed\getACFLayout(),
     ];
     foreach ($layouts as $layout) {
@@ -69,6 +70,7 @@ add_action('Flynt/afterRegisterComponents', function () {
         Components\SliderImageGallery\getACFLayout(),
         Components\SliderImagesCentered\getACFLayout(),
         Components\SpecialsPackagesSlider\getACFLayout(),
+        Components\BlockCustomHtml\getACFLayout(),
     ];
     foreach ($secondaryLayouts as $secondaryLayout) {
         $config = ResolveConfig::forLayout($secondaryLayout, ['pageComponentsSecondary_pageComponentsSecondary']);
@@ -95,6 +97,7 @@ add_action('Flynt/afterRegisterComponents', function () {
         Components\BlockWysiwyg\getACFLayout(),
         Components\GridImageText\getACFLayout(),
         Components\NavigationFooterColumns\getACFLayout(),
+        Components\BlockCustomHtml\getACFLayout(),
     ];
     foreach ($homepageLayouts as $homepageLayout) {
         $config = ResolveConfig::forLayout($homepageLayout, ['pageComponentsHome_pageComponentsHome']);
@@ -145,6 +148,7 @@ add_action('Flynt/afterRegisterComponents', function () {
         Components\SliderImageGallery\getACFLayout(),
         Components\SliderImagesCentered\getACFLayout(),
         Components\SpecialsPackagesSlider\getACFLayout(),
+        Components\BlockCustomHtml\getACFLayout(),
     ];
     foreach ($secondaryWithSidebarLayouts as $secondaryWithSidebarLayout) {
         $config = ResolveConfig::forLayout($secondaryWithSidebarLayout, ['pageComponentsSecondaryWithSidebar_pageComponentsSecondaryWithSidebar']);
