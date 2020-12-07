@@ -49,8 +49,31 @@
         </section>
         
         <footer class="mainFooter">
+        <aside>
+            {% block footerSidebar %}
+            <div class="flyntComponent componentSpacing " is="flynt-list-components">
+              <div class="container centerMaxWidthContainer">
+                <ul class="components">
+                  <li class="component boxShadow">
+                     {{dynamic_sidebar1}}
+                  </li>
+                  <li class="component boxShadow">
+                    <h3>Newsletter Sign Up</h3>
+                    {{dynamic_sidebar2}}
+                  </li>
+                  <li class="component boxShadow" style="padding:15px;">
+                    {{dynamic_sidebar3}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {% endblock %}
+          </aside>
           {% block footer %}
-            {{ renderComponent('NavigationFooter') }}
+            {# {{ renderComponent('NavigationFooter') }} #}
+            <div class="container centerMaxWidthContainer">
+            <p class="copyright" style="text-align:right;font-size:0.75em;">&copy; {{ now|date('Y') }} by {{ bloginfo('name') }}</p>
+          </div>
           {% endblock %}
         </footer>
       </div>
