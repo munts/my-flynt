@@ -37,7 +37,7 @@
   .content {
     @include reset-content-margins;
     max-width: $content-max-width;
-    padding: 0 15px;
+    padding: 15px;
     text-align: left;
   }
 
