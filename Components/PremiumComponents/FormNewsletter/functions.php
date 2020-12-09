@@ -22,13 +22,13 @@ function getACFLayout()
 }
 
 
-// add_action('Flynt/afterRegisterComponents', function () {
-//     Options::addTranslatable('FormNewsletter', [
-//         [
-//             'label' => '',
-//             'name' => 'form',
-//             'type' => 'group',
-//             'sub_fields' => Components\FormContactForm7\getACFFields(),
-//         ]
-//     ]);
-// });
+add_action('Flynt/afterRegisterComponents', function () {
+    Options::addTranslatable('FormNewsletter', [
+        [
+            'label' => '',
+            'name' => 'form',
+            'type' => 'group',
+            'sub_fields' => Components\FormContactForm7\getACFFields(),
+        ]
+    ]);
+});
