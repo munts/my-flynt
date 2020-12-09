@@ -59,7 +59,8 @@
                   </li>
                   <li class="component boxShadow">
                     <h3>Newsletter Sign Up</h3>
-                    {{dynamic_sidebar2}}
+                    {# {{dynamic_sidebar2}} #}
+                    {{ renderComponent('FormContactForm7', form) }}
                   </li>
                   <li class="component boxShadow" style="padding:15px;">
                     {{dynamic_sidebar3}}
