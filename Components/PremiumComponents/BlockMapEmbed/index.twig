@@ -16,6 +16,12 @@
         const map = new google.maps.Map(document.getElementById("myMap"), {
             zoom: 14,
             center: uluru,
+            styles: [
+              {
+                featureType: "poi.business",
+                stylers: [{ visibility: "off" }],
+              }
+            ],
         });
         // The marker, positioned at Uluru
         const marker = new google.maps.Marker({
