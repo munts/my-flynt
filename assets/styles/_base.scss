@@ -9,9 +9,10 @@
 @include font-face('Montserrat', 'montserrat-v14-latin-regular', '400', 'normal');
 @include font-face('Montserrat', 'montserrat-v14-latin-italic', '400', 'italic');
 @include font-face('Montserrat', 'montserrat-v14-latin-700', '700', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-700italic', '700', 'italic');
+// @include font-face('Montserrat', 'montserrat-v14-latin-700italic', '700', 'italic');
+
 @include font-face('Font Awesome 5 Free', 'fa-solid-900');
-@include font-face('Font Awesome 5 Free', 'fa-regular-400');
+// @include font-face('Font Awesome 5 Free', 'fa-regular-400');
 @include font-face('Font Awesome 5 Free', 'fa-brands-400');
 
 html {
