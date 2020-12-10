@@ -64,10 +64,10 @@
           </aside>
           {% block footer %}
           {# {{ renderComponent('NavigationFooter') }} #}
+          {% endblock %}
           <div class="container centerMaxWidthContainer">
             <p class="copyright" style="text-align:right;font-size:0.75em;">&copy; {{ now|date('Y') }} by {{ bloginfo('name') }}</p>
           </div>
-          {% endblock %}
         </footer>
       </div>
     {% endblock %}
