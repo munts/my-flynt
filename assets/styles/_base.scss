@@ -439,8 +439,8 @@ legend {
 label {
   display: inline-block;
   font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
 }
 
 #{$input-selectors} {
@@ -573,7 +573,7 @@ select {
   flex: 1 0 auto;
   left: 0;
   position: relative;
-  top: -150px;
+  top: 0;
 }
 
 .mainContentWithSidebar {
@@ -587,7 +587,7 @@ select {
   flex: 1 0 auto;
   left: 0;
   position: relative;
-  top: -150px;
+  top: 0;
 }
 
 .component.boxShadow {
