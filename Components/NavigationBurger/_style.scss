@@ -52,10 +52,20 @@
         top: 32px;
       }
     }
-  }
 
-  .menu2 ul {
-    padding: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      margin-left: -40px;
+    }
+
+    li a {
+      font-size: 0.9em;
+    }
+
   }
 
   .menu2 li {
@@ -105,7 +115,12 @@
   }
 
   li.nav-drop-item:hover {
-    background-color: #e4e4cb;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  li.nav-drop-item a:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: #bb0e02;
   }
   // stylelint-enable selector-no-qualifying-type
 
