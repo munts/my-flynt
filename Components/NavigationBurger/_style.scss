@@ -70,12 +70,17 @@
 
   .menu2 li {
     display: block;
-    padding: 10px 0;
+    padding: 5px 0;
+    text-align: center;
   }
 
   a {
     cursor: pointer;
     text-decoration: none;
+  }
+
+  .button--small {
+    padding: 0.25rem 1rem;
   }
 
   .nav-drop {
