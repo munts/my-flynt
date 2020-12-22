@@ -642,6 +642,11 @@ select {
   position: relative;
 }
 
+input [type='checkbox'] {
+  opacity: 1;
+  width: 15px;
+}
+
 .componentSpacing {
   margin: $component-spacing-mobile 0;
 
