@@ -647,6 +647,10 @@ input [type='checkbox'] {
   width: 15px;
 }
 
+.iContactForm img {
+  max-width: 1px;
+}
+
 .componentSpacing {
   margin: $component-spacing-mobile 0;
 
