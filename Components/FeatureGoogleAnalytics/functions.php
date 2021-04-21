@@ -15,32 +15,32 @@ function isTrackingEnabled($gaId)
     return false;
 }
 
-add_action('wp_head', function () {
-    echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43322510-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "UA-43322510-1");';
-    echo 'setTimeout("gtag(\'event\', \'No Bounce\', { \'event_category\' : \'Adjusted Bounce\' })",30000);';
-    echo '</script>';
-});
+// add_action('wp_head', function () {
+//     echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43322510-1"></script>
+//     <script>
+//     window.dataLayer = window.dataLayer || [];
+//     function gtag(){dataLayer.push(arguments);}
+//     gtag("js", new Date());
+//     gtag("config", "UA-43322510-1");';
+//     echo 'setTimeout("gtag(\'event\', \'No Bounce\', { \'event_category\' : \'Adjusted Bounce\' })",30000);';
+//     echo '</script>';
+// });
 
-add_filter('Flynt/addComponentData?name=FeatureGoogleAnalytics', function ($data) {
-    $googleAnalyticsOptions = Options::getGlobal('GoogleAnalytics');
+// add_filter('Flynt/addComponentData?name=FeatureGoogleAnalytics', function ($data) {
+//     $googleAnalyticsOptions = Options::getGlobal('GoogleAnalytics');
 
-    if ($googleAnalyticsOptions) {
-        $isTrackingEnabled = isTrackingEnabled($googleAnalyticsOptions['gaId']);
-        $data['jsonData'] = json_encode([
-            'gaId' => $googleAnalyticsOptions['gaId'],
-            'anonymizeIp' => $googleAnalyticsOptions['anonymizeIp'],
-            'isOptInComponentRegistered' => did_action('Flynt/thirdPartyCookies/initializeOptions'),
-        ]);
-        $data['isTrackingEnabled'] = $isTrackingEnabled;
-    }
+//     if ($googleAnalyticsOptions) {
+//         $isTrackingEnabled = isTrackingEnabled($googleAnalyticsOptions['gaId']);
+//         $data['jsonData'] = json_encode([
+//             'gaId' => $googleAnalyticsOptions['gaId'],
+//             'anonymizeIp' => $googleAnalyticsOptions['anonymizeIp'],
+//             'isOptInComponentRegistered' => did_action('Flynt/thirdPartyCookies/initializeOptions'),
+//         ]);
+//         $data['isTrackingEnabled'] = $isTrackingEnabled;
+//     }
 
-    return $data;
-});
+//     return $data;
+// });
 
 add_action('Flynt/thirdPartyCookies/initializeOptions', function () {
     Options::addTranslatable('GoogleAnalytics', [
