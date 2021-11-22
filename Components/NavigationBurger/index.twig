@@ -2,7 +2,7 @@
   <div class="container centerMaxWidthContainer">
     <ul class="menu2" style="list-style: none;">
       <li><a href="tel:{{phoneNum}}">{{phoneNum}}</a></li>
-      <li><a href="https://reservations.sitzmarklodge.com/irm/irm.html" onClick="gtag('event', 'Click', { 'event_category': 'Booking Lead', 'event_action':'Click','event_label':'Book Now Button' });"><button class="button button--small bookNow">Book NOW</button></a></li>
+      <li><a href="https://sitzmarklodge.client.innroad.com/" onClick="gtag('event', 'Click', { 'event_category': 'Booking Lead', 'event_action':'Click','event_label':'Book Now Button' });"><button class="button button--small bookNow">Book NOW</button></a></li>
     </ul>
     {% include 'Partials/_logo.twig' with { 'logo': logo, 'site': site } only %}
     {% if menu %}

@@ -23,6 +23,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridImageText\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
+                    Components\GridPostsStaff\getACFLayout(),
                     Components\ListComponents\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                 ]
