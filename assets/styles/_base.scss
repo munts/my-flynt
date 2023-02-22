@@ -561,7 +561,7 @@ select {
   height: 100%;
 
   .admin-bar & {
-    padding-top: 46px;
+    //padding-top: 46px;
 
     @media (min-width: 782px) {
       padding-top: 32px;
@@ -701,6 +701,31 @@ input [type='checkbox'] {
   }
 }
 
+.componentSpacingIndex {
+  margin: $component-spacing-mobile 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: $component-spacing-tablet 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 250px 0 0;
+  }
+
+  &[class*='theme'] {
+    margin: 0;
+    padding: $component-spacing-mobile 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: $component-spacing-tablet 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: $component-spacing-desktop 0;
+    }
+  }
+}
+
 .centerMaxWidthContainer {
   @include center;
 
@@ -801,6 +826,7 @@ input [type='checkbox'] {
 /* Custom styling for single post layouts */
 
 .post {
+margin-top: 250px;
   &-main {
     .componentSpacing {
       margin: $component-spacing-mobile/2 0;

@@ -1,5 +1,4 @@
-
-<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-grid-posts-archive">
+<div class="flyntComponent componentSpacingIndex {{ options.theme }}" is="flynt-grid-posts-archive">
   <div class="container centerMaxWidthContainer">
     <div class="preContent">
       <h1>{{ title }}</h1>
@@ -7,12 +6,12 @@
       {{ html|e('wp_kses_post') }}
     </div>
     {% if terms %}
-       {% include 'Partials/_filter.twig' %}
+      {% include 'Partials/_filter.twig' %}
     {% endif %}
     <ul class="posts">
       {% for post in posts %}
         <li class="post">
-          <a class="post-link" href="{{ post.link }}" title="{{ post.title }}">
+          <a class="post-link" href="{{ post.link }}">
             {% if post.thumbnail %}
               <figure class="figure">
                 <img class="figure-image lazyload"
@@ -28,11 +27,18 @@
                     {{ post.thumbnail.src|resizeDynamic(424, 283) }} 424w,
                     {{ post.thumbnail.src|resizeDynamic(312, 208) }} 312w"
                   data-sizes="auto"
-                  alt="{{ post.thumbnail.alt|e }}">
+                  alt="{{ post.title }}">
               </figure>
             {% endif %}
           </a>
           <div class="post-inner">
+          	{% if post.terms('tag')  %}
+			        <ul class="tags">
+			          {% for tag in post.terms('tag')  %}
+			            <li class="tags-item"><a class="tags-itemLink pill" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
+			          {% endfor %}
+			        </ul>
+			      {% endif %}
             <h2 class="h3 post-title">{{ post.title }}</h2>
             <p class="post-excerpt">{{ post.preview.read_more(false) }}</p>
             <a class="button button--link" href="{{ post.link }}" title="{{ post.title }}" aria-hidden="true" tabindex="-1">

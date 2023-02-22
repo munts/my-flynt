@@ -1,0 +1,61 @@
+<div class="flyntComponent componentSpacingIndex {{ options.theme }}" is="flynt-grid-posts-archive">
+  <div class="container centerMaxWidthContainer">
+    <div class="preContent">
+      <h1>{{ title }}</h1>
+      {% set html = isHome ? preContentHtml : description %}
+      {{ html|e('wp_kses_post') }}
+    </div>
+    {% if terms %}
+       {% include 'Partials/_filter.twig' %}
+    {% endif %}
+    <ul class="posts">
+      {% for post in posts %}
+      <li class="post">
+      {% for component in post.meta('postComponents') %}
+        <a class="post-link" href="{{ post.link }}" title="{{ post.title }}">
+        <img class="figure-image lazyload"
+        src="{{ component.image.src|resizeDynamic(424, 283) }}"
+        srcset="{{ placeholderImage(3, 2) }}"
+        data-srcset="
+          {{ component.image.src|resizeDynamic(1920, 1280) }} 1920w,
+          {{ component.image.src|resizeDynamic(1320, 880) }} 1320w,
+          {{ component.image.src|resizeDynamic(1280, 853) }} 1280w,
+          {{ component.image.src|resizeDynamic(1050, 700) }} 1050w,
+          {{ component.image.src|resizeDynamic(750, 500) }} 750w,
+          {{ component.image.src|resizeDynamic(600, 400) }} 600w,
+          {{ component.image.src|resizeDynamic(424, 283) }} 424w,
+          {{ component.image.src|resizeDynamic(312, 208) }} 312w"
+        data-sizes="auto"
+        alt="{{ component.image.alt|e }}">
+        </a>
+      {% endfor %}
+      
+        <div class="post-inner">
+        {% if post.terms('tag')  %}
+	        <ul class="tags">
+	          {% for tag in post.terms('tag')  %}
+	            <li class="tags-item"><a class="tags-itemLink pill" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
+	          {% endfor %}
+	        </ul>
+	      {% endif %}
+          <h2 class="h3 post-title">{{ post.title }}</h2>
+          
+	      {% for component in post.meta('postComponents') %}    
+	        {{ component.contentHtml|truncate(25) }}
+	      {% endfor %}
+          
+          <a class="button button--link" href="{{ post.link }}" title="{{ post.title }}" aria-hidden="true" tabindex="-1">
+            {{ labels.readMore }}
+          </a>
+        </div>
+      </li>
+      {% else %}
+        <p class="posts-empty">{{ labels.noPostsFound }}</p>
+      {% endfor %}
+    </ul>
+    {% set pagination = posts.pagination %}
+    {% if pagination.pages %}
+      {% include 'Partials/_paginationButtons.twig' %}
+    {% endif %}
+  </div>
+</div>

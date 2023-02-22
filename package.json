@@ -1,8 +1,11 @@
 {
-  "name": "flynt",
+  "name": "composer",
   "version": "1.2.1",
   "main": "index.js",
-  "repository": "git@github.com:flyntwp/flynt.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/flyntwp/flynt.git"
+  },
   "author": "bleech <hello@bleech.de>",
   "license": "MIT",
   "scripts": {
@@ -132,5 +135,16 @@
     "> 1%",
     "last 2 versions",
     "not ie 10"
+  ],
+  "description": "[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![Build Status](https://travis-ci.org/flyntwp/flynt.svg?branch=master)](https://travis-ci.org/flyntwp/flynt) [![Code Quality](https://img.shields.io/scrutinizer/g/flyntwp/flynt.svg)](https://scrutinizer-ci.com/g/flyntwp/flynt/?branch=master)",
+  "bugs": {
+    "url": "https://github.com/flyntwp/flynt/issues"
+  },
+  "homepage": "https://github.com/flyntwp/flynt#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "composer"
   ]
 }

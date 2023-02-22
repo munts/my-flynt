@@ -1,4 +1,4 @@
-const host = 'https://sitzmark.local'
+const host = 'https://sitzmark.test'
 const dest = './dist'
 
 function getCopyConfig (source) {
