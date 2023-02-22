@@ -826,7 +826,8 @@ input [type='checkbox'] {
 /* Custom styling for single post layouts */
 
 .post {
-margin-top: 250px;
+  margin-top: 250px;
+  
   &-main {
     .componentSpacing {
       margin: $component-spacing-mobile/2 0;
