@@ -45,3 +45,6 @@ function remove_default_widgets()
 }
 
 do_action('widgets_init', 'remove_default_widgets', 15);
+
+// remove category:
+add_filter( 'get_the_archive_title_prefix', '__return_false' );

@@ -702,10 +702,10 @@ input [type='checkbox'] {
 }
 
 .componentSpacingIndex {
-  margin: $component-spacing-mobile 0;
+  margin: 300px 0;
 
   @media (min-width: $breakpoint-tablet) {
-    margin: $component-spacing-tablet 0;
+    margin: 300px 0;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -714,7 +714,7 @@ input [type='checkbox'] {
 
   &[class*='theme'] {
     margin: 0;
-    padding: $component-spacing-mobile 0;
+    padding: 450px 0;
 
     @media (min-width: $breakpoint-tablet) {
       padding: $component-spacing-tablet 0;
@@ -826,7 +826,10 @@ input [type='checkbox'] {
 /* Custom styling for single post layouts */
 
 .post {
-  margin-top: 250px;
+  margin-top: 180px;
+  @media (min-width: $breakpoint-desktop) {
+	  margin-top: 250px;
+	}
   
   &-main {
     .componentSpacing {

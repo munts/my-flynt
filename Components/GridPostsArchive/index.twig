@@ -32,6 +32,9 @@
             {% endif %}
           </a>
           <div class="post-inner">
+          	{% if post.date %}
+		          <time class="meta-date" datetime="{{ post.post_date }}">{{ post.date|date }}</time> {{ dividers.authorDivider|e }}
+		        {% endif %}
           	{% if post.terms('tag')  %}
 			        <ul class="tags">
 			          {% for tag in post.terms('tag')  %}

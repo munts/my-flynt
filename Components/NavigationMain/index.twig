@@ -1,4 +1,4 @@
-<nav is="flynt-navigation-main" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
+<nav {% if fn('is_single') or fn('is_archive') %} is="flynt-navigation-main-blog" {% else %} is="flynt-navigation-main" {% endif %} class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="wrapper">
     <div id="utility" class="container utilityNav">
         <ul class="menu left">
