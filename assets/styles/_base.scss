@@ -828,8 +828,8 @@ input [type='checkbox'] {
 .post {
   margin-top: 180px;
   @media (min-width: $breakpoint-desktop) {
-	  margin-top: 250px;
-	}
+    margin-top: 250px;
+  }
   
   &-main {
     .componentSpacing {
